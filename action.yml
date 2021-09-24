@@ -1,0 +1,21 @@
+---
+
+# https://help.github.com/en/articles/metadata-syntax-for-github-actions
+
+name: appcenter-parse-issue
+description: Parses AppCenter submission issues and creates associated PRs
+author: elementary
+
+branding:
+  icon: crosshair
+  color: green
+
+runs:
+  using: node12
+  main: dist/index.js
+
+inputs:
+  token:
+    description: A GitHub API token
+    required: false
+    default: ${{ github.token }}
